@@ -1,0 +1,13 @@
+# PROJECT FILES
+node-modules/
+dist/
+
+# DOCKER
+Dockerfile
+docker*
+.dockerignore
+
+# ENVIROMENTS
+.env
+.env.local
+.env.*.local
