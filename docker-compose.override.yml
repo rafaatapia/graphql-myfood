@@ -6,4 +6,4 @@ services:
       - '4000:4000'
     command: npm run dev
     volumes:
-      - './apps/api:/usr/app'
+      - ./apps/api:/usr/app
