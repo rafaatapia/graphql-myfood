@@ -11,7 +11,7 @@ const resolvers = {
   User: {
     name: (parent): string => {
       console.log('Parent: ', parent)
-      return 'User: ' + parent.name
+      return parent.name
     },
   },
   Query: {
