@@ -1,5 +1,5 @@
-import { Schema, Document } from 'mongoose'
-import { User } from '.'
+import { Schema, Document, Types } from 'mongoose'
+import { User, OrderItemSubdocument } from '.'
 
 export enum OrderStatus {
   WAITING_PAYMENT,
@@ -15,6 +15,7 @@ export interface Order {
   user: User
   total: number
   status: OrderStatus
+  items: Types.DocumentArray<OrderItemSubdocument>
   createdAt: string
   updateAt: string
 }
