@@ -3,6 +3,6 @@ import { OrderDocument, ProductDocument, UserDocument } from '.'
 
 export interface Models {
   Order: Model<OrderDocument>
-  Produt: Model<ProductDocument>
+  Product: Model<ProductDocument>
   User: Model<UserDocument>
 }
