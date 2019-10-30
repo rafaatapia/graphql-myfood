@@ -1,4 +1,9 @@
-import { Resolver, ProductCreateInput } from '../types'
+import {
+  Resolver,
+  ProductCreateInput,
+  Product,
+  ProductDeleteInput,
+} from '../types'
 
 const createProduct: Resolver<ProductCreateInput> = (_, args, { models }) => {
   const { Product } = models
@@ -7,6 +12,13 @@ const createProduct: Resolver<ProductCreateInput> = (_, args, { models }) => {
   return product.save()
 }
 
+const deleteProduct: Resolver<ProductDeleteInput> = (_, args, { models }) => {
+  const { Product } = models
+  const { _id } = args
+  return Product.findByIdAndDelete(_id).exec()
+}
+
 export default {
   createProduct,
+  deleteProduct,
 }
