@@ -11,7 +11,7 @@ export enum OrderStatus {
 }
 
 export interface Order {
-  id: Schema.Types.ObjectId
+  _id: Schema.Types.ObjectId
   user: User
   total: number
   status: OrderStatus
@@ -20,5 +20,5 @@ export interface Order {
 }
 
 export interface OrderDocument extends Order, Document {
-  id: Schema.Types.ObjectId
+  _id: Schema.Types.ObjectId
 }
