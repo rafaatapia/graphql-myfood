@@ -1,9 +1,4 @@
-import {
-  Resolver,
-  ProductCreateInput,
-  Product,
-  ProductDeleteInput,
-} from '../types'
+import { Resolver, ProductCreateInput, ProductDeleteInput } from '../types'
 
 const createProduct: Resolver<ProductCreateInput> = (_, args, { models }) => {
   const { Product } = models
