@@ -2,7 +2,7 @@ import {
   Resolver,
   ProductCreateInput,
   ProductUpdateInput,
-  ProductDeleteInput,
+  ProductByIdInput,
 } from '../types'
 import { checkExistence } from '../utils'
 
@@ -30,7 +30,7 @@ const updateProduct: Resolver<ProductUpdateInput> = async (
   return Product.findByIdAndUpdate(_id, data, { new: true })
 }
 
-const deleteProduct: Resolver<ProductDeleteInput> = async (
+const deleteProduct: Resolver<ProductByIdInput> = async (
   _,
   args,
   { models },

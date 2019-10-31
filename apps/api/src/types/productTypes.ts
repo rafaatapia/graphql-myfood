@@ -17,9 +17,9 @@ export interface ProductCreateInput {
   data: OmitID<Product>
 }
 
-export interface ProductDeleteInput {
+export interface ProductByIdInput {
   _id: Schema.Types.ObjectId
 }
 
-export interface ProductUpdateInput extends ProductCreateInput, ProductDeleteInput {}
+export interface ProductUpdateInput extends ProductCreateInput, ProductByIdInput {}
 }
