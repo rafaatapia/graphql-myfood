@@ -21,5 +21,6 @@ export interface ProductByIdInput {
   _id: Schema.Types.ObjectId
 }
 
-export interface ProductUpdateInput extends ProductCreateInput, ProductByIdInput {}
-}
+export interface ProductUpdateInput
+  extends ProductCreateInput,
+    ProductByIdInput {}
