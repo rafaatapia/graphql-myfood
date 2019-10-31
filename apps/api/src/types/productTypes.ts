@@ -20,3 +20,6 @@ export interface ProductCreateInput {
 export interface ProductDeleteInput {
   _id: Schema.Types.ObjectId
 }
+
+export interface ProductUpdateInput extends ProductCreateInput, ProductDeleteInput {}
+}
